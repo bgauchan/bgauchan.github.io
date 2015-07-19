@@ -9,12 +9,12 @@
   </head>
   <body>
 
-    <nav class="<%= page.toLowerCase() %>">
+    <nav class="<%= page.toLowerCase() %>" style="background: <%= typeof navColor == 'undefined' ? '' : navColor %>">
       <ul>
         <% if(page === "About") { %>
-          <li><a class="active" href="/about">About</a></li>
+          <li><a class="active" href="/about.html">About</a></li>
         <% } else { %>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about.html">About</a></li>
         <% } %>
 
         <% if(page === "Home") { %>
