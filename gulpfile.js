@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var ejs = require('gulp-ejs');
+var gutil = require('gulp-util');
 var minifyCSS = require('gulp-minify-css');
 
  // for debugging, lets chrome & firefox know the css line number of the original file
@@ -28,6 +29,12 @@ gulp.task('less', function () {
 
 });
 
+gulp.task('templates', function() {
+  gulp.src('./templates/*.ejs')
+    .pipe(ejs().on('error', gutil.log))
+    .pipe(gulp.dest('./'));
+});
+
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
     message: 'Error: <%= error.message %>'
@@ -36,6 +43,7 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 
 gulp.task('watch', function() {
   gulp.watch('less/*.less', ['less']);
+  gulp.watch('./templates/*.ejs', ['templates']);
 });
 
-gulp.task('default', ['less', 'watch']);
+gulp.task('default', ['less', 'templates', 'watch']);

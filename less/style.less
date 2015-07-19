@@ -25,6 +25,7 @@ img {
 
 nav {
   background: @primary-color;
+  box-sizing: border-box;
   padding: 1.5rem;
   text-align: center;
 
@@ -59,9 +60,12 @@ nav {
   }
 }
 
+nav.home {
+  display: none;
+}
+
 .home,
-.about,
-.thoughts {
+.about {
   font-size: 0;
   width: 100%;
 }
@@ -205,3 +209,8 @@ nav {
     .translateY(-50%);
   }
 } // End of sidebar
+
+.container.about {
+  font-size: 1.8rem;
+  padding: 3rem 3rem 0 3rem;
+}

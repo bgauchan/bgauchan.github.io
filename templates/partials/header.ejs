@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <nav class="<%= page.toLowerCase() %>">
+      <ul>
+
+        <% if(page === "About") { %>
+          <li><a class="active" href="/about">About</a></li>
+        <% } else { %>
+          <li><a href="/about">About</a></li>
+        <% } %>
+
+        <% if(page === "Home") { %>
+          <li><a class="active" href="/">Home</a></li>
+        <% } else { %>
+          <li><a href="/">Home</a></li>
+        <% } %>
+
+        <li><a href="http://bgauchan.tumblr.com/" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
