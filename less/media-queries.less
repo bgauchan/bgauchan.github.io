@@ -1,0 +1,54 @@
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: @bp-desktop) {
+  #content {
+    width: 52%;
+  }
+  #sidebar {
+    width: 48%;
+  }
+}
+
+@media (max-width: 850px) {
+  #content {
+    width: 50%;
+  }
+  #sidebar {
+    width: 50%;
+  }
+}
+
+@media (max-width: @bp-tablet) {
+  html { font-size: 55%; }
+
+  #content {
+    padding: 2rem;
+    overflow: auto;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  #sidebar {
+    padding: 2rem;
+      width: 100%;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (max-width: @bp-phablet) {
+
+  #home {
+    .character {
+      display: none;
+    }
+  }
+
+  #container .vertical-padding {
+    height: 0;
+  }
+}
+
+@media (max-width: @bp-mobile) {}

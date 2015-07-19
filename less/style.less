@@ -1,0 +1,207 @@
+/*
+Theme Name:  Bardan Gauchan
+*/
+
+@import "skeleton.less";
+@import "variables.less";
+@import "mixins.less";
+@import "media-queries.less";
+
+@import "home.less";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+nav {
+  background: @primary-color;
+  padding: 1.5rem;
+  text-align: center;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 30px;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  a.active {
+    border-bottom: 2px solid white;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-bottom: 2px solid white;
+    color: white;
+  }
+}
+
+.home,
+.about,
+.thoughts {
+  font-size: 0;
+  width: 100%;
+}
+
+.content {
+  display: inline-block;
+  padding: 2rem;
+  height: 100vh;
+  overflow-y: scroll;
+  text-align: center;
+  width: 56%;
+}
+
+.social-links-list {
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.social-links-list li {
+  display: inline-block;
+  list-style-type: none;
+
+  &:last-child {
+    margin: 0;
+  }
+  margin-right: 10px;
+}
+
+.social-links {
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+}
+
+.social-links:hover {
+  .keyframes(expand; {
+    from {
+      background-size: 3rem 3rem;
+    }
+    to {
+      background-size: 2.4rem 2.4rem;
+    }
+  });
+
+  .animation-name(expand);
+  .animation-duration(0.2s);
+  .animation-fill-mode(both);
+}
+
+.twitter {
+  background-image: url("img/twitter.svg");
+}
+
+.twitter-color {
+  background-image: url("img/twitter-color.svg");
+}
+
+.instagram {
+  background-image: url("img/instagram.svg");
+}
+
+.instagram-color {
+  background-image: url("img/instagram-color.svg");
+}
+
+.dribbble {
+  background-image: url("img/dribbble.svg");
+}
+
+.dribbble-color {
+  background-image: url("img/dribbble-color.svg");
+}
+
+.github {
+  background-image: url("img/github.svg");
+}
+
+.github-color {
+  background-image: url("img/github-color.svg");
+}
+
+.linkedin {
+  background-image: url("img/linkedin.svg");
+}
+
+.linkedin-color {
+  background-image: url("img/linkedin-color.svg");
+}
+
+.footer.social-links-list {
+  border-top: 1px solid lightgray;
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.sidebar {
+  background: @primary-color;
+  color: white;
+    display: inline-block;
+  height: 100vh;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: 44%;
+
+  nav {
+    padding: 0;
+  }
+
+  .character {
+    background: url("img/character.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 14rem;
+    height: 7rem;
+
+    .translateX(-58%);
+  }
+
+  p {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .info {
+    font-size: 1.8rem;
+    position: relative;
+    top: 40%;
+
+    .translateY(-50%);
+  }
+} // End of sidebar
