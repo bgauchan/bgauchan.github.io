@@ -1,2 +1,1 @@
-bgauchan.github.com
-===================
+HTML, CSS, JS files for my personal site.
