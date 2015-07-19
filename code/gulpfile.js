@@ -25,14 +25,14 @@ gulp.task('less', function () {
       .pipe(concat("style.css"))
       .pipe(minifyCSS())
     .pipe(sourcemaps.write())
-      .pipe(gulp.dest('./'));
+      .pipe(gulp.dest('../'));
 
 });
 
 gulp.task('templates', function() {
   gulp.src('./templates/*.ejs')
     .pipe(ejs().on('error', gutil.log))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('../'));
 });
 
 var plumberErrorHandler = { errorHandler: notify.onError({
@@ -42,7 +42,7 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 };
 
 gulp.task('watch', function() {
-  gulp.watch('less/*.less', ['less']);
+  gulp.watch('./less/*.less', ['less']);
   gulp.watch('./templates/*.ejs', ['templates']);
 });
 

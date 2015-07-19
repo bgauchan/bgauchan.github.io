@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Bardan - <%= page %></title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
@@ -11,7 +11,6 @@
 
     <nav class="<%= page.toLowerCase() %>">
       <ul>
-
         <% if(page === "About") { %>
           <li><a class="active" href="/about">About</a></li>
         <% } else { %>
