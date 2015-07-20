@@ -1,0 +1,136 @@
+
+
+<% var page = 'Work'; %>
+<% var navColor = '#D21F24'; %>
+<% include partials/header.ejs %>
+
+<div id="project" class="container project">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Healthtap</h1>
+
+      <h4>Designing the first 90 seconds experience ofthe iPhone app<h4>
+
+          <a href="img/healthtap/icons-compare.png"><img src="img/healthtap/icons-compare.png" alt="icons-compare"/></a>
+
+          <h3>0 - 5 seconds: Icon</h3>
+          <p>Everything starts with the icon. When a user is browsing through hundreds of apps, a good icon helps an app stand out among others. Along with the name, it gives the user an idea on what your app does and if they should give it a try. It is also the very first thing that a user sees, so it is extremely important that we get the icon right. First impression always matter!</p>
+          <p>I took the liberty to tweak the old icon in order to bring it up to the new design standards of the iOS platform. I removed the glare, shadow, and reflection from the icon. The medical cross/t shape was thinned out just a little and the white border was made smaller to sharpen the shape of the logo and make it stand out from the background.</p>
+
+          <h4>5 - 35 seconds: Onboarding / Educating</h4>
+          <p>If your product is not simple and doesn't have a straight-forward functionality like a calculator, alarm clock, or a weather app, an onboarding process will provide great value to a new user. This process has three goals:
+      1. Highlight our product's core features and functionality.
+      2. Educate the user on how those features are beneficial to them.
+      3. Convince the user to sign up and use the product.</p>
+        </div>
+
+      <a href="img/healthtap/onboarding.png"><img src="img/healthtap/onboarding.png" alt="onboarding"/></a>
+
+      <p>I ended up mocking two different versions, each with couple of screens which highlight the core features of our product. In the examples below, I only mocked up three screens with three different features. In the real version, we would definitely add a few more. The messages in each screen is short and straight to the point.</p>
+
+      <h4>Version 1</h4>
+
+      <p>Simple red background with a floating card that contains the pictures and messages. Each card changes with the user's swipe gesture.</p>
+
+      <a href="img/healthtap/onboarding-v1.png"><img src="img/healthtap/onboarding-v1.png" alt="onboarding-v1"/></a>
+
+      <h4>Version 2</h4>
+
+      <p>Same concept but with a background image. The background image needed to be something that would provide a nice mood (hence the sunny green field) and setting to read the messages but at the same time not distract the user away from the main goal of the process, which is following the guide and reading the messages.</p>
+
+      <p>A semi-transparent layer of black color was added on top to darken the image a little bit and make the text more readable. The background image is also static so it stays the same on every screen. When we swipe across different screens, only the messages and pictures change and hence creating a floating animation effect.</p>
+
+      <a href="img/healthtap/onboarding-v2.png"><img src="img/healthtap/onboarding-v2.png" alt="onboarding-v2"/></a>
+
+      <div class="row">
+        <div class="five columns">
+          <a href="img/healthtap/healthtap-signup.png"><img src="img/healthtap/healthtap-signup.png" alt="healthtap-signup"/></a>
+        </div>
+        <div class="seven columns">
+          <div class="vertical-padding"></div>
+          <h4>35 - 50 seconds: Signup</h4>
+          <p>Signing up is pretty simple and straight-forward. All we need from the user is some info regarding whether they are a member or a doctor and then we display the appropriate fields to gather inform</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <div class="vertical-padding"></div>
+          <h4>50 - 75 seconds: Personalization / Adding Information</h4>
+          <p>When a user is creating a new account, he/she is asked to enter their personal information. If a user wanted to, they could skip this process and use the app as an anonymous user.</p>
+          <p>I cleaned up these screens by removing labels for most of the fields. The placeholder text in these fields are enough to guide the user in entering the correct information in each of them. We saved a lot of space by removing the labels and I used that extra space to make the personalization notice a little bigger.</p>
+        </div>
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-personalize-1.png"><img src="img/healthtap/healthtap-personalize-1.png" alt="healthtap-personalize-1"/></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-personalize-2.png"><img src="img/healthtap/healthtap-personalize-2.png" alt="healthtap-personalize-2"/></a>
+        </div>
+        <div class="six columns">
+          <div class="vertical-padding"></div>
+          <h4>50 - 75 seconds: Personalization / Adding Information</h4>
+          <p>Since we have quite a few fields that a user needs to fill out, I split the one long signup screen to two smaller screens which can be navigated with the buttons. Splitting the fields into two screens creates an illusion of a shorter signup process - potentially increasing chances of user sticking through the whole process.</p>
+          <p>A complete book that is fitted in one page would seem incredibly tedious to read compared to the same book that is split into multiple pages. Similarly, a signup process that involves substantial amount of fields to fill out will provide a better experience if it's split into few pages/screens or at least creates an illusion of looking like it is. Not knowing how many fields there are left to fill out is better than knowing you have 10 more to go.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <div class="vertical-padding"></div>
+          <h4>75 - 90 seconds: Selecting health interest or topics</h4>
+          <p>I've also swapped the three input fields to enter a topic or interest with a button that lets you pick them through a list. This was done due to few reasons:</p>
+
+          <p>Making a user enter a topic/interest results in higher chances of spelling mistakes. Would our system figure out that a user meant to enter "Brain Cancer" when they actually typed "Brian Cancer" and show the appropriate results? Picking from a list removes the chances of making an error. You only pick what you can see.</p>
+
+          <p>Giving the user a list of options to choose from removes the pressure of not knowing what to enter. When they see a blank input field asking them to enter a topic or interest, it automatically makes them think - "well, what do they have in their system?" or "I wish I could see some examples of things I could enter".</p>
+
+          <p>Lastly, having three input fields limits the user to select only 3 options while selecting from a list is seemingly unlimited.</p>
+        </div>
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-personalize-2-2.png"><img src="img/healthtap/healthtap-personalize-2-2.png" alt="healthtap-personalize-2-2"/></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-nofeed.png"><img src="img/healthtap/healthtap-nofeed.png" alt="healthtap-nofeed"/></a>
+        </div>
+        <div class="six columns">
+          <div class="vertical-padding"></div>
+          <h4>90 seconds - Onwards: Home Screen</h4>
+          <p>I've also completely revamped the home screen. The logo of Healthtap is now in the navbar and the only navigation buttons now present are the notifications button and the hamburger button a.k.a the swipe-to-see- another-screen-with-options button. I kept the notifications button because those are usually important and should be one tap away from seeing what's going on in the app and obviously the hamburger button which lets you see more options.</p>
+          <p>If a user hasn't followed any topics or interest, a subtle hint will show up to persuade the user to search and follow things that interest them. If he/she has already selected a few topics or when they do, it'll start showing up here. I've merged the home screen with the feeds screen. This screen will be primarily used to display the feed of topics, questions, interests, etc. that a user follows or has subscribed to.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-search.png"><img src="img/healthtap/healthtap-search.png" alt="healthtap-search"/></a>
+        </div>
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-feed.png"><img src="img/healthtap/healthtap-feed.png" alt="healthtap-feed"/></a>
+        </div>
+        <p>When a user performs a search, then the screen will be replaced with the results of the search.</p>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <div class="vertical-padding"></div>
+          <p>I've moved everything else to to the hidden screen that can be accessed with the hamburger button. This setup keeps the home screen very clean and makes it easy for the user remember where's what. Plus, the layout is a tableview which gives us the flexibility of adding more links or actions in there.</p>
+          <p>Deeper settings and options can be accessed through here as well. For example, clicking "Ask a Doctor" will take you to the screen that gives you more tools to perform necessary tasks. Think of this screen like a shortcut button to go into more sophisticated screens.</p>
+        </div>
+        <div class="six columns">
+          <a href="img/healthtap/healthtap-options.png"><img src="img/healthtap/healthtap-options.png" alt="healthtap-options"/></a>
+        </div>
+      </div>
+
+    </div> <!-- end of columns -->
+
+  </div> <!-- end of row -->
+</div> <!-- end of project -->
+
+<% var page = 'Project'; %>
+<% include partials/footer.ejs %>
