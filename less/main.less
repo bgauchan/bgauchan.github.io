@@ -1,0 +1,89 @@
+@import 'reset.less';
+
+body {
+    display: flex;
+    height: 100vh;
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        line-height: 1.5;
+        margin: 15px 0;
+    }
+}
+
+aside {
+    background: #08172f;
+    color: white;
+    display: flex;
+    padding: 0 37rem 0 40rem;
+    position: relative;
+
+    .info {
+        align-self: center;
+        min-width: 360px;
+        // background: red;
+    }
+
+    .social_links_list {
+        display: flex;
+    }
+
+    .social_links {
+        background-size: 30rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        height: 30rem;
+        width: 30rem;
+        margin-right: 10rem;
+
+        &:hover {
+            @keyframes expand {
+              from {
+                background-size: 30rem;
+              }
+              to {
+                background-size: 24rem;
+              }
+            }
+          
+            animation-name: expand;
+            animation-duration: 0.2s;
+            animation-fill-mode: both;
+        }
+
+        &.twitter {
+            background-image: url('img/twitter.svg');
+        }
+
+        &.instagram {
+          background-image: url("img/instagram.svg");
+        }
+        
+        &.dribbble {
+          background-image: url("img/dribbble.svg");
+        }
+
+        &.github {
+          background-image: url("img/github.svg");
+        }
+        
+        &.linkedin {
+          background-image: url("img/linkedin.svg");
+        }
+    }
+
+    .character {
+        align-self: flex-end;
+        background: url('img/character.svg') center no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 48%;
+        transform: translateX(-50%);
+        width: 96rem;
+        height: 52rem;
+    }
+}
