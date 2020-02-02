@@ -1,9 +1,13 @@
 
 jQuery(document).ready(function($) {
-    animate("recent_work_1");
-    animate("recent_work_2");
-    animate("recent_work_3");
-    animate("recent_work_4");
+    var windowWidth = $(window).width();
+
+    if(windowWidth > 860) {
+        animate("recent_work_1");
+        animate("recent_work_2");
+        animate("recent_work_3");
+        animate("recent_work_4");
+    }
 });
 
 
