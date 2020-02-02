@@ -184,6 +184,14 @@ aside {
             font-size: 14px;
             padding: 10rem 20rem;
             text-decoration: none;
+            transition: box-shadow .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+
+            &:hover {
+                background: #ef7e1a;
+                border: 1px solid transparent;
+                box-shadow: 0 15px 30px rgba(0,0,0,.3);
+                color: white;
+            }
         }
     }
 }
