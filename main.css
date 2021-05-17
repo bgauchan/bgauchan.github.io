@@ -6,7 +6,7 @@
     --text-color: #43536C;
     --link-color: #3d5bf1;
 
-    --normal-margin-gap: min(30px, 3vw);
+    --normal-margin-gap: min(30px, 4vw);
     --big-margin-gap: min(60px, 6vw);
 }
 
@@ -51,17 +51,19 @@ a {
 
 .container {
     background: var(--background-color);
-    padding: min(100px, 10vw);
+    box-sizing: border-box;
+    padding: min(100px, 6vw);
     position: relative;
     max-width: 1500px;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 /** Main Section **/
 
 img.character {
     position: absolute;
-    top: min(100px, 20vw);
+    top: min(100px, 14vw);
     right: -40px;
     transform: rotate(-90deg);
     transition: transform 300ms ease-out;
@@ -176,4 +178,69 @@ main .icons .instagram svg:hover {
 
 .side-projects-grid p {
     margin-top: var(--normal-margin-gap);
+}
+
+@media (max-width: 900px) {
+    main .links,
+    .side-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    img.character {
+        height: 60px;
+        width: 113px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-weight: 600;
+    }
+
+    .container > section {
+        border-top: 2px dotted var(--text-header-color);
+        margin-top: 40px;
+    }
+
+    img.character {
+        height: 50px;
+        width: 94px;
+        right: -22px;
+    }
+
+    main .intro p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    main .links > a, 
+    main .links > div {
+        padding: 12px 18px;
+    }
+
+    .side-projects-grid > a {
+        padding: 20px 25px;
+    }
+
+    .side-projects-grid .icon {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .side-projects-grid .icon.man {
+        font-size: 34px;
+    }
 }
