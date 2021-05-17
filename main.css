@@ -6,7 +6,8 @@
     --text-color: #43536C;
     --link-color: #3d5bf1;
 
-    --normal-margin-top: min(30px, 3vw);
+    --normal-margin-gap: min(30px, 3vw);
+    --big-margin-gap: min(60px, 6vw);
 }
 
 * {
@@ -29,7 +30,18 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
+h1 {
+    font-weight: 800;
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 36px;
+    margin: var(--big-margin-gap) 0 min(20px, 3vw);
+}
+
 h3 {
+    color: var(--text-header-secondary-color);
     font-size: 24px;
 }
 
@@ -41,14 +53,11 @@ a {
     background: var(--background-color);
     padding: min(100px, 10vw);
     position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 /** Main Section **/
-
-h1 {
-    font-weight: 800;
-    font-size: 60px;
-}
 
 img.character {
     position: absolute;
@@ -65,16 +74,17 @@ main .intro p {
     max-width: 640px;
 }
 
-main .links {
+main .links,
+.side-projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: min(40px, 4vw);
-    margin-top: min(80px, 6vw);
+    margin-top: var(--big-margin-gap);
 }
 
 main .links > a,
 main .links > div {
-    border: 2px solid var(--text-header-secondary-color);
+    border: 1px solid var(--text-header-secondary-color);
     border-radius: 8px;
     padding: 25px 30px;
     transition: background 250ms;
@@ -86,7 +96,7 @@ main .links a {
 
 main .links > a:hover {
     background: var(--text-header-secondary-color);
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 main .links > a:hover h3,
@@ -96,11 +106,11 @@ main .links > a:hover p {
 
 main .links p {
     font-weight: 600;
-    margin-top: var(--normal-margin-top);
+    margin-top: var(--normal-margin-gap);
 }
 
 main .icons {
-    margin-top: var(--normal-margin-top);
+    margin-top: var(--normal-margin-gap);
     display: flex;
     justify-content: space-between;
     max-width: 280px;
@@ -124,4 +134,46 @@ main .icons .instagram svg {
 
 main .icons .instagram svg:hover {
     transform: scale(1.25) translateY(2px);
+}
+
+.side-projects-grid > a {
+    background: #EEFAF7;
+    border-radius: 8px;
+    border: 1px solid rgba(50, 101, 98, .5);
+    padding: 25px 30px;
+    text-decoration: none;
+    transition: background 250ms;
+}
+
+.side-projects-grid > a:hover {
+    background: var(--text-header-secondary-color);
+    border: 1px solid black;
+}
+
+.side-projects-grid > a:hover h3,
+.side-projects-grid > a:hover p {
+    color: white;
+}
+
+.side-projects-grid > a:hover .icon {
+    background: #EEFAF7;
+}
+
+.side-projects-grid .icon {
+    background: #5b6e8a;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    height: 80px;
+    width: 80px;
+    font-size: 36px;
+    margin-bottom: var(--normal-margin-gap);
+}
+
+.side-projects-grid .icon.man {
+    font-size: 42px;
+}
+
+.side-projects-grid p {
+    margin-top: var(--normal-margin-gap);
 }
