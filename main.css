@@ -49,12 +49,15 @@ a {
     color: var(--link-color);
 }
 
-.container {
+body {
     background: var(--background-color);
+}
+
+.container {
     box-sizing: border-box;
     padding: min(100px, 6vw);
     position: relative;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
     min-height: 100vh;
 }
@@ -62,10 +65,11 @@ a {
 /** Main Section **/
 
 img.character {
-    position: absolute;
-    top: min(100px, 14vw);
-    right: -34px;
-    transform: rotate(-90deg);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transform: rotate(180deg);
     transition: transform 300ms ease-out;
 }
 
@@ -81,7 +85,7 @@ main .links,
 .work-projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: min(30px, 4vw);
+    grid-gap: min(20px, 4vw);
     margin-top: var(--big-margin-gap);
 }
 
@@ -255,7 +259,6 @@ main .icons .instagram svg:hover {
     img.character {
         height: 60px;
         width: 113px;
-        right: -30px;
     }
 }
 
@@ -264,6 +267,7 @@ main .icons .instagram svg:hover {
         font-size: 50px;
         line-height: 1.2;
         margin-bottom: 30px;
+        max-width: 300px;
     }
 
     h2 {
@@ -282,7 +286,6 @@ main .icons .instagram svg:hover {
     img.character {
         height: 50px;
         width: 94px;
-        right: -22px;
     }
 
     main .intro p {
@@ -292,11 +295,11 @@ main .icons .instagram svg:hover {
 
     main .links > a, 
     main .links > div {
-        padding: 12px 18px;
+        padding: 12px 18px 16px;
     }
 
     .side-projects-grid > a {
-        padding: 20px 25px;
+        padding: 20px;
     }
 
     .side-projects-grid .icon {
